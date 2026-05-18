@@ -1,4 +1,7 @@
-node_modules
+.agents
 .DS_Store
-Thumbs.db
+node_modules
 PROJECT.md
+PRODUCT.md
+Thumbs.db
+skills-lock.json

@@ -1,25 +1,25 @@
 [
   {
     "termo": "ET",
-    "definicao": "Enzo Túlio Ferreira Carvalho (03/11/2001). 24 anos, 1,94 de altura, 122kgs. Solteiro (atualizado 13/02/2026).\nO terror do silício.",
+    "definicao": "Enzo Túlio Ferreira Carvalho, 24 (03/11/2001). 1,94 de altura, 118kgs, calçado 47. Solteiro (informação de 13/02/2026).\nPorte alto e imponente, pele amanteigada e cabelos castanho longos e sedosos.\nO terror do silício.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "1155",
-    "definicao": "Modelo de socket de placa mãe lendária para processadores Intel de 2ª e 3ª geração.",
+    "definicao": "Modelo de socket de placa mãe lendária para processadores Intel de 2ª e 3ª geração. Primeiro computador do ET.\nExistem boatos de que seu primeiro berço era feito de componentes de duas placas mãe 1155 queimadas. Não foi confirmado. Também não foi negado.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Games",
-    "definicao": "Jogos",
+    "definicao": "Vide Jogos",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Jogos",
-    "definicao": "Games",
+    "definicao": "Vide Games",
     "exemplo": "",
     "categoria": ""
   },
@@ -37,25 +37,25 @@
   },
   {
     "termo": "Kiara\nQuiara",
-    "definicao": "Cara",
+    "definicao": "Cara, mas com um chanzes.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Artefato",
-    "definicao": "Defeito visual.",
+    "definicao": "Defeito visual. Geralmente gerado por placas de vídeo defeituosas, ou maracutaias insalubres.",
     "exemplo": "Essa placa tá dando artefato.",
     "categoria": ""
   },
   {
     "termo": "Raise",
-    "definicao": "Processador Ryzen.",
+    "definicao": "Processador Ryzen, da AMD. Um dos reis do custo-benefício.\nNão confundir com aumento salarial. A decepção seria enorme.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Benk\nBencar",
-    "definicao": "Benchmark. Teste de performance.",
+    "definicao": "Benchmark. Ato de fazer um teste de performance em determinado setup, para determinar qual o máximo de desempenho do hardware sob condições ideais.",
     "exemplo": "",
     "categoria": ""
   },
@@ -67,19 +67,19 @@
   },
   {
     "termo": "Irmão Gamer",
-    "definicao": "Enrico Túlio, irmão do ET.",
+    "definicao": "Enrico Túlio, irmão do ET, mesmo sendo um ele próprio.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Linuqui\nLinuki",
-    "definicao": "Linux",
+    "definicao": "Linux.\nSistema operacional que promete liberdade e entrega três horas configuração do driver do mouse.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Lata",
-    "definicao": "Parte física do hardware ou sistema.\nInvólucro protetor de eletrônicos produzido por material metálico.\nAmontoado de metal e silício que conduza eletricidade e, ocasionalmente, rode jogos.",
+    "definicao": "Parte física do hardware ou sistema.\nInvólucro protetor de eletrônicos produzido por material metálico.\nAmontoado de metal e silício conduzente de eletricidade que, ocasionalmente, roda jogos.",
     "exemplo": "",
     "categoria": ""
   },
@@ -91,13 +91,13 @@
   },
   {
     "termo": "Na alta\nNa altinha",
-    "definicao": "Na coragem",
+    "definicao": "Na coragem.\nMétodo para resolução de problemas técnicos baseado no otimismo.",
     "exemplo": "Vamos rodar esse jogo sem dll, na altinha?",
     "categoria": ""
   },
   {
     "termo": "Na baixa",
-    "definicao": "Na humildade",
+    "definicao": "Na humildade.",
     "exemplo": "",
     "categoria": ""
   },
@@ -108,14 +108,14 @@
     "categoria": ""
   },
   {
-    "termo": "Tchansis\nPlanzis\nChanzes\nPimbis",
+    "termo": "Tchansis\nChanzes\nChinses\nPlanzis\nPimbis\nFanvas",
     "definicao": "Tchan",
     "exemplo": "Aquela outra câmera era mais pimbis.",
     "categoria": ""
   },
   {
     "termo": "Eti\nEtanol\nÉter\nEtevaldo",
-    "definicao": "Apelidos carinhosos provenientes de desdobramentos de 'ET'.",
+    "definicao": "Apelidos carinhosos provenientes de desdobramentos do nome 'ET'.",
     "exemplo": "",
     "categoria": ""
   },
@@ -127,13 +127,13 @@
   },
   {
     "termo": "Liso",
-    "definicao": "Performance excelente de hardware. Jogo funcionando a 60fps ou mais.",
+    "definicao": "Performance excelente de hardware. Jogo funcionando a 60+ fps.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Seco",
-    "definicao": "Baixa performance, sem lubrificação.",
+    "definicao": "Baixa performance, sem lubrificação.\nHardware pedindo socorro em tempo real.",
     "exemplo": "",
     "categoria": ""
   },
@@ -145,13 +145,13 @@
   },
   {
     "termo": "Labubu",
-    "definicao": "Lubuntu Linux, sistema operacional.",
+    "definicao": "Lubuntu Linux, sistema operacional.\nApelido fofo para monstro capaz de ressuscitar relíquias eras antigas.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Batocera",
-    "definicao": "Sistema operacional baseado em Linux focado em jogos e games retro e emulação.",
+    "definicao": "Sistema operacional baseado em Linux focado em jogos e games retrô e emulação.",
     "exemplo": "",
     "categoria": ""
   },
@@ -175,7 +175,7 @@
   },
   {
     "termo": "Gargalo",
-    "definicao": "Acontece quando a performance de um sistema é limitado pela performance de um componente específico.",
+    "definicao": "Acontece quando a performance de um sistema é limitado pela performance de um componente específico.\nQuando o componente mais fraco de um setup quer ser protagonista na hora errada.",
     "exemplo": "Ai ET, ta gargalando.",
     "categoria": ""
   },
@@ -199,13 +199,13 @@
   },
   {
     "termo": "Stock",
-    "definicao": "Sem overclock, no padrão.",
+    "definicao": "Sem overclock, desempenho padrão do hardware.\nComo a fábrica envia o equipamento, antes do ET se aproximar de suas imediações.",
     "exemplo": "Vou precisar usar em stock.",
     "categoria": ""
   },
   {
     "termo": "Debloat",
-    "definicao": "Remover recursos extras e desnecessários para atingir a melhor performance possível.",
+    "definicao": "Remover recursos extras e desnecessários para atingir a melhor performance possível.\nMarie Kondo do sistema operacional.",
     "exemplo": "",
     "categoria": ""
   },
@@ -223,13 +223,13 @@
   },
   {
     "termo": "Rapaziadinha",
-    "definicao": "Telespectadores",
+    "definicao": "Telespectadores.\nComunidade seleta de amantes do PC.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Pambas",
-    "definicao": "Questionável",
+    "definicao": "Questionável.\nMediante avaliação técnica perita, identificaram-se discretos, leves e suaves riscos de incompatibilidade com a integridade física do usuário durante o uso do equipamento.",
     "exemplo": "Esse processador tá meio pambas.",
     "categoria": ""
   },
@@ -241,25 +241,31 @@
   },
   {
     "termo": "Lixo Eletrônico",
-    "definicao": "Hardware que qualquer pessoa normal jogaria fora, mas que o ET transforma em games.",
+    "definicao": "Hardware que qualquer pessoa normal jogaria fora, mas o ET transforma em games.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Cinematográfico",
-    "definicao": "24fps\nPara alguns, a forma ideal de aprecisar jogos (COPIUM), pois o olho humano não enxerga mais frames por segundo.",
+    "definicao": "24 frames por segundo.\nPotencialmente a forma ideal de aprecisar jogos, levando em conta o limite de FPS percebido pelo olho humano. O limite do olho humano fica em torno de 24 fps e DDR3.\nArgumento usado por quem não conhece o pato.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Nintendinho",
-    "definicao": "Super Nintendo, SNES",
+    "definicao": "Super Nintendo, SNES.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Mineirando",
     "definicao": "Processador em alto funcionamento sem um motivo aparente.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Garotas gamers",
+    "definicao": "0.3% do público ativo do canal.",
     "exemplo": "",
     "categoria": ""
   }

@@ -18,14 +18,59 @@ function normalizeTerm(text) {
   return [text];
 }
 
+const loadingMessages = [
+  'Carregando termos...',
+  'Consultando o 1155...',
+  'Organizando o vocabulario do ET...',
+  'Buscando na memoria do chat...',
+];
+
+const emptyMessages = [
+  'Nenhum termo encontrado para',
+  'Nada sobre isso no dicionario ainda. Manda pro ET!',
+  'A comunidade do ET e criativa, mas nao tanto. Tenta outro termo.',
+  'Essa guria e nova ate pro 1155.',
+  'Buscou e nao achou. Sugere esse termo pro ET na live!',
+];
+
 let allEntries = [];
 let termLinks = [];
+let lastEmptyIndex = -1;
+
+function pickMessage(arr) {
+  let idx;
+  do {
+    idx = Math.floor(Math.random() * arr.length);
+  } while (idx === lastEmptyIndex && arr.length > 1);
+  lastEmptyIndex = idx;
+  return arr[idx];
+}
+
+function showLoading(visible) {
+  const el = document.getElementById('loadingState');
+  el.classList.toggle('hidden', !visible);
+  if (visible) {
+    el.textContent = pickMessage(loadingMessages);
+  }
+}
+
+function shakeElement(el) {
+  el.classList.remove('shake');
+  void el.offsetWidth;
+  el.classList.add('shake');
+  setTimeout(() => el.classList.remove('shake'), 500);
+}
 
 function loadData() {
+  showLoading(true);
   fetch('db/termos.json')
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error('Falha ao carregar');
+      return res.json();
+    })
     .then(data => {
       allEntries = data;
+      showLoading(false);
 
       allEntries.sort((a, b) => {
         const ta = a.termo.split('\n')[0].trim().toLowerCase();
@@ -55,6 +100,7 @@ function loadData() {
       renderEntries(allEntries, '');
     })
     .catch(err => {
+      showLoading(false);
       document.getElementById('entriesContainer').innerHTML =
         '<div class="empty-state">Erro ao carregar os dados.</div>';
     });
@@ -63,18 +109,27 @@ function loadData() {
 function renderEntries(entries, searchTerm) {
   const container = document.getElementById('entriesContainer');
   const emptyState = document.getElementById('emptyState');
-  const noResultsTerm = document.getElementById('noResultsTerm');
 
   if (entries.length === 0) {
     container.innerHTML = '';
-    noResultsTerm.textContent = searchTerm;
+    const msg = pickMessage(emptyMessages);
+    emptyState.className = 'empty-state';
+    const escapedTerm = escapeHtml(searchTerm);
+    if (msg.includes('Nenhum termo encontrado para')) {
+      emptyState.innerHTML = '<p>' + msg + ' "' + escapedTerm + '"</p>';
+    } else {
+      emptyState.innerHTML = '<p>' + msg + '</p>';
+    }
     emptyState.classList.remove('hidden');
+    if (searchTerm.trim()) {
+      shakeElement(document.querySelector('.search-container'));
+    }
     return;
   }
 
   emptyState.classList.add('hidden');
 
-  container.innerHTML = entries.map(entry => {
+  container.innerHTML = entries.map((entry, index) => {
     const terms = normalizeTerm(entry.termo);
     const cardId = slugify(terms[0]);
     const definicoes = splitAlternatives(entry.definicao);
@@ -99,7 +154,8 @@ function renderEntries(entries, searchTerm) {
       ? `<div class="entry-example">${linkifyText(entry.exemplo, terms)}</div>`
       : '';
 
-    return `<article id="${cardId}" class="entry-card">${termHtml}${defHtml}${exemploHtml}</article>`;
+    const delay = Math.min(index * 40, 400);
+    return `<article id="${cardId}" class="entry-card" style="animation-delay:${delay}ms">${termHtml}${defHtml}${exemploHtml}</article>`;
   }).join('');
 }
 
