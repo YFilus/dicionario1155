@@ -1,7 +1,7 @@
 [
   {
     "termo": "ET",
-    "definicao": "Enzo Túlio Ferreira Carvalho (03/11/2001).\n24 anos, 1,94 de altura, 122kgs.\nSolteiro (atualizado 13/02/2026).",
+    "definicao": "Enzo Túlio Ferreira Carvalho (03/11/2001). 24 anos, 1,94 de altura, 122kgs. Solteiro (atualizado 13/02/2026).\nO terror do silício.",
     "exemplo": "",
     "categoria": ""
   },
@@ -54,14 +54,14 @@
     "categoria": ""
   },
   {
-    "termo": "Benk",
+    "termo": "Benk\nBencar",
     "definicao": "Benchmark. Teste de performance.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "500 e oitenti",
-    "definicao": "Placa de vídeo RX 580 chinesa de origem duvidosa.",
+    "definicao": "Placa de vídeo RX 580 chinesa de qualidade duvidosa.\nFeita de restos de guerra e suor de mineiro chinês.",
     "exemplo": "",
     "categoria": ""
   },
@@ -79,18 +79,18 @@
   },
   {
     "termo": "Lata",
-    "definicao": "Parte física do hardware ou sistema.\nGabinete.\nEnvólucro protetor de eletrônicos produzido por material metálico.",
+    "definicao": "Parte física do hardware ou sistema.\nInvólucro protetor de eletrônicos produzido por material metálico.\nAmontoado de metal e silício que conduza eletricidade e, ocasionalmente, rode jogos.",
     "exemplo": "",
     "categoria": ""
   },
   {
     "termo": "Sovar\nLenha",
-    "definicao": "Maltratar'. Forçar o hardware ao máximo.",
+    "definicao": "Forçar o hardware ao máximo.\nÉ o ato de torturar o hardware até ele entregar mais desempenho.",
     "exemplo": "Vamos sovar essa lata.",
     "categoria": ""
   },
   {
-    "termo": "Na alta / Na altinha",
+    "termo": "Na alta\nNa altinha",
     "definicao": "Na coragem",
     "exemplo": "Vamos rodar esse jogo sem dll, na altinha?",
     "categoria": ""
@@ -102,15 +102,15 @@
     "categoria": ""
   },
   {
-    "termo": "Barrabinbarrabash",
+    "termo": "Barabinbarabash",
     "definicao": "/bin/bash\nComando comum no Linux para identificar o interpretador de comandos no sistema.",
     "exemplo": "",
     "categoria": ""
   },
   {
-    "termo": "Tchansis\nPlanzis\nChanzes",
-    "definicao": "Tchum",
-    "exemplo": "Essa placa nem chanzes.",
+    "termo": "Tchansis\nPlanzis\nChanzes\nPimbis",
+    "definicao": "Tchan",
+    "exemplo": "Aquela outra câmera era mais pimbis.",
     "categoria": ""
   },
   {
@@ -120,7 +120,7 @@
     "categoria": ""
   },
   {
-    "termo": "pipipitchu\nppp2",
+    "termo": "Pipipitchu\nPPP2",
     "definicao": "Versão demonstrativa de jogos e games.",
     "exemplo": "",
     "categoria": ""
@@ -157,13 +157,13 @@
   },
   {
     "termo": "Pato",
-    "definicao": "Se refere ao software 'Lossless Scaling' por possuir um pato como ícone.",
+    "definicao": "Software 'Lossless Scaling'. Possui esse apelido por possuir um pato como ícone.\nÚnico animal capaz de dobrar frames no grito.\nTransforma 30fps em 60fps com o poder da inteligência artificial e da fé.",
     "exemplo": "Vamos puxar o pato?",
     "categoria": ""
   },
   {
     "termo": "Gap",
-    "definicao": "Ser humilhado pela lata. Dar errado.",
+    "definicao": "Ser humilhado pela lata. Dar errado. Não funcionar.\nO momento em que o hardware desiste da vida.",
     "exemplo": "Tomei gap da lata.",
     "categoria": ""
   },
@@ -231,6 +231,36 @@
     "termo": "Pambas",
     "definicao": "Questionável",
     "exemplo": "Esse processador tá meio pambas.",
+    "categoria": ""
+  },
+  {
+    "termo": "Seco Seco Seco",
+    "definicao": "Seco em grau superlativo.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Lixo Eletrônico",
+    "definicao": "Hardware que qualquer pessoa normal jogaria fora, mas que o ET transforma em games.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Cinematográfico",
+    "definicao": "24fps\nPara alguns, a forma ideal de aprecisar jogos (COPIUM), pois o olho humano não enxerga mais frames por segundo.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Nintendinho",
+    "definicao": "Super Nintendo, SNES",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Mineirando",
+    "definicao": "Processador em alto funcionamento sem um motivo aparente.",
+    "exemplo": "",
     "categoria": ""
   }
 ]

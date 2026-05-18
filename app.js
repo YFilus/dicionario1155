@@ -80,14 +80,12 @@ function renderEntries(entries, searchTerm) {
     const definicoes = splitAlternatives(entry.definicao);
     const hasExemplo = entry.exemplo && entry.exemplo.trim().length > 0;
 
-    const termHtml = terms.length > 1
-      ? `<div class="term-alternatives">${
-          terms.map((t, i) =>
-            (i > 0 ? '<span class="term-sep">ou</span>' : '') +
-            `<span class="term-tag">${escapeHtml(t)}</span>`
-          ).join('')
-        }</div>`
-      : `<h2>${escapeHtml(terms[0])}</h2>`;
+    const termHtml = `<div class="term-alternatives">${
+        terms.map((t, i) =>
+          (i > 0 ? '<span class="term-sep">ou</span>' : '') +
+          `<span class="term-tag">${escapeHtml(t)}</span>`
+        ).join('')
+      }</div>`;
 
     const defHtml = definicoes.length > 0
       ? `<div class="entry-definition">${
