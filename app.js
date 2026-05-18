@@ -1,14 +1,20 @@
 function splitAlternatives(text) {
   if (!text) return [];
-  return text.split('\n').map(s => s.trim()).filter(Boolean);
+  return text
+    .split("\n")
+    .map((s) => s.trim())
+    .filter(Boolean);
 }
 
 function hasSlashAlternatives(text) {
-  return text.includes(' / ');
+  return text.includes(" / ");
 }
 
 function splitSlashAlternatives(text) {
-  return text.split(' / ').map(s => s.trim()).filter(Boolean);
+  return text
+    .split(" / ")
+    .map((s) => s.trim())
+    .filter(Boolean);
 }
 
 function normalizeTerm(text) {
@@ -19,18 +25,18 @@ function normalizeTerm(text) {
 }
 
 const loadingMessages = [
-  'Carregando termos...',
-  'Consultando o 1155...',
-  'Organizando o vocabulario do ET...',
-  'Buscando na memoria do chat...',
+  "Carregando termos...",
+  "Consultando o 1155...",
+  "Organizando o vocabulario do ET...",
+  "Buscando na memoria do chat...",
 ];
 
 const emptyMessages = [
-  'Nenhum termo encontrado para',
-  'Nada sobre isso no dicionario ainda. Manda pro ET!',
-  'A comunidade do ET e criativa, mas nao tanto. Tenta outro termo.',
-  'Essa guria e nova ate pro 1155.',
-  'Buscou e nao achou. Sugere esse termo pro ET na live!',
+  "Nenhum termo encontrado.",
+  "Nada sobre isso no dicionário ainda. Manda pro ET!",
+  "A comunidade do ET e criativa, mas nao tanto. Tenta outro termo.",
+  "Essa giria e nova até pro 1155.",
+  "Buscou e nao achou. Sugere esse termo pro ET na live!",
 ];
 
 let allEntries = [];
@@ -47,39 +53,39 @@ function pickMessage(arr) {
 }
 
 function showLoading(visible) {
-  const el = document.getElementById('loadingState');
-  el.classList.toggle('hidden', !visible);
+  const el = document.getElementById("loadingState");
+  el.classList.toggle("hidden", !visible);
   if (visible) {
     el.textContent = pickMessage(loadingMessages);
   }
 }
 
 function shakeElement(el) {
-  el.classList.remove('shake');
+  el.classList.remove("shake");
   void el.offsetWidth;
-  el.classList.add('shake');
-  setTimeout(() => el.classList.remove('shake'), 500);
+  el.classList.add("shake");
+  setTimeout(() => el.classList.remove("shake"), 500);
 }
 
 function loadData() {
   showLoading(true);
-  fetch('db/termos.json')
-    .then(res => {
-      if (!res.ok) throw new Error('Falha ao carregar');
+  fetch("db/termos.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("Falha ao carregar");
       return res.json();
     })
-    .then(data => {
+    .then((data) => {
       allEntries = data;
       showLoading(false);
 
       allEntries.sort((a, b) => {
-        const ta = a.termo.split('\n')[0].trim().toLowerCase();
-        const tb = b.termo.split('\n')[0].trim().toLowerCase();
-        if (ta === 'et') return -1;
-        if (tb === 'et') return 1;
-        if (ta === '1155') return -1;
-        if (tb === '1155') return 1;
-        return ta.localeCompare(tb, 'pt-BR');
+        const ta = a.termo.split("\n")[0].trim().toLowerCase();
+        const tb = b.termo.split("\n")[0].trim().toLowerCase();
+        if (ta === "et") return -1;
+        if (tb === "et") return 1;
+        if (ta === "1155") return -1;
+        if (tb === "1155") return 1;
+        return ta.localeCompare(tb, "pt-BR");
       });
 
       termLinks = [];
@@ -97,88 +103,99 @@ function loadData() {
       }
       termLinks.sort((a, b) => b.term.length - a.term.length);
 
-      renderEntries(allEntries, '');
+      renderEntries(allEntries, "");
     })
-    .catch(err => {
+    .catch((err) => {
       showLoading(false);
-      document.getElementById('entriesContainer').innerHTML =
+      document.getElementById("entriesContainer").innerHTML =
         '<div class="empty-state">Erro ao carregar os dados.</div>';
     });
 }
 
 function renderEntries(entries, searchTerm) {
-  const container = document.getElementById('entriesContainer');
-  const emptyState = document.getElementById('emptyState');
+  const container = document.getElementById("entriesContainer");
+  const emptyState = document.getElementById("emptyState");
 
   if (entries.length === 0) {
-    container.innerHTML = '';
+    container.innerHTML = "";
     const msg = pickMessage(emptyMessages);
-    emptyState.className = 'empty-state';
+    emptyState.className = "empty-state";
     const escapedTerm = escapeHtml(searchTerm);
-    if (msg.includes('Nenhum termo encontrado para')) {
-      emptyState.innerHTML = '<p>' + msg + ' "' + escapedTerm + '"</p>';
+    if (msg.includes("Nenhum termo encontrado para")) {
+      emptyState.innerHTML = "<p>" + msg + ' "' + escapedTerm + '"</p>';
     } else {
-      emptyState.innerHTML = '<p>' + msg + '</p>';
+      emptyState.innerHTML = "<p>" + msg + "</p>";
     }
-    emptyState.classList.remove('hidden');
+    emptyState.classList.remove("hidden");
     if (searchTerm.trim()) {
-      shakeElement(document.querySelector('.search-container'));
+      shakeElement(document.querySelector(".search-container"));
     }
     return;
   }
 
-  emptyState.classList.add('hidden');
+  emptyState.classList.add("hidden");
 
-  container.innerHTML = entries.map((entry, index) => {
-    const terms = normalizeTerm(entry.termo);
-    const cardId = slugify(terms[0]);
-    const definicoes = splitAlternatives(entry.definicao);
-    const hasExemplo = entry.exemplo && entry.exemplo.trim().length > 0;
+  container.innerHTML = entries
+    .map((entry, index) => {
+      const terms = normalizeTerm(entry.termo);
+      const cardId = slugify(terms[0]);
+      const definicoes = splitAlternatives(entry.definicao);
+      const hasExemplo = entry.exemplo && entry.exemplo.trim().length > 0;
 
-    const termHtml = `<div class="term-alternatives">${
-        terms.map((t, i) =>
-          (i > 0 ? '<span class="term-sep">ou</span>' : '') +
-          `<span class="term-tag">${escapeHtml(t)}</span>`
-        ).join('')
-      }</div>`;
+      const termHtml = `<div class="term-alternatives">${terms
+        .map(
+          (t, i) =>
+            (i > 0 ? '<span class="term-sep">ou</span>' : "") +
+            `<span class="term-tag">${escapeHtml(t)}</span>`,
+        )
+        .join("")}</div>`;
 
-    const defHtml = definicoes.length > 0
-      ? `<div class="entry-definition">${
-          definicoes.map(d =>
-            `<div class="def-item">${linkifyText(d, terms)}</div>`
-          ).join('')
-        }</div>`
-      : '';
+      const defHtml =
+        definicoes.length > 0
+          ? `<div class="entry-definition">${definicoes
+              .map(
+                (d) => `<div class="def-item">${linkifyText(d, terms)}</div>`,
+              )
+              .join("")}</div>`
+          : "";
 
-    const exemploHtml = hasExemplo
-      ? `<div class="entry-example">${linkifyText(entry.exemplo, terms)}</div>`
-      : '';
+      const exemploHtml = hasExemplo
+        ? `<div class="entry-example">${linkifyText(entry.exemplo, terms)}</div>`
+        : "";
 
-    const delay = Math.min(index * 40, 400);
-    return `<article id="${cardId}" class="entry-card" style="animation-delay:${delay}ms">${termHtml}${defHtml}${exemploHtml}</article>`;
-  }).join('');
+      const delay = Math.min(index * 40, 400);
+      return `<article id="${cardId}" class="entry-card" style="animation-delay:${delay}ms">${termHtml}${defHtml}${exemploHtml}</article>`;
+    })
+    .join("");
 }
 
 function escapeHtml(text) {
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   div.textContent = text;
   return div.innerHTML;
 }
 
 function slugify(text) {
-  return 'term-' + text
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+  return (
+    "term-" +
+    text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "")
+  );
 }
 
 function linkifyText(text, skipTerms = []) {
   let result = escapeHtml(text);
-  const skipLower = new Set(skipTerms.map(t => t.toLowerCase()));
+  const skipLower = new Set(skipTerms.map((t) => t.toLowerCase()));
   for (const { term, id } of termLinks) {
     if (skipLower.has(term)) continue;
-    const regex = new RegExp('\\b(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'gi');
+    const regex = new RegExp(
+      "\\b(" + term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")\\b",
+      "gi",
+    );
     result = result.replace(regex, (match) => {
       if (match.toLowerCase() === term) {
         return `<a href="#${id}" class="term-link">${match}</a>`;
@@ -193,7 +210,7 @@ function filterEntries(searchTerm) {
   const term = searchTerm.toLowerCase().trim();
   if (!term) return allEntries;
 
-  return allEntries.filter(entry => {
+  return allEntries.filter((entry) => {
     const termo = entry.termo.toLowerCase();
     const definicao = entry.definicao.toLowerCase();
     const exemplo = entry.exemplo.toLowerCase();
@@ -205,13 +222,13 @@ function filterEntries(searchTerm) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   loadData();
 
-  const searchInput = document.getElementById('searchInput');
+  const searchInput = document.getElementById("searchInput");
   let debounceTimer;
 
-  searchInput.addEventListener('input', () => {
+  searchInput.addEventListener("input", () => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
       const filtered = filterEntries(searchInput.value);

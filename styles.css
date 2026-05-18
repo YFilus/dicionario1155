@@ -335,6 +335,24 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+.footer-links {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+
+.footer-links a:hover {
+    color: #ff0000;
+}
+
 .heart {
     display: inline-block;
     transition: transform 0.2s ease-out;
