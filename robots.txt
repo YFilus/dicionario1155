@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dicionario1155doet.netlify.app/sitemap.xml

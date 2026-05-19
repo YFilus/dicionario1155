@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicionário do 1155 do ET</title>
+  <meta name="description" content="Dicionário colaborativo de termos de informática e games do universo do streamer ET (1155 do ET). Busque gírias, definições e exemplos do vocabulário da comunidade.">
+  <meta name="keywords" content="dicionário, ET, 1155 do ET, informática, games, streamer, gírias, vocabulário">
+  <meta property="og:title" content="Dicionário do 1155 do ET">
+  <meta property="og:description" content="Vocabulário de informática e games do universo ET">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dicionario1155doet.netlify.app">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0f0f1a">
+  <link rel="canonical" href="https://dicionario1155doet.netlify.app">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{{JSONLD}}
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Dicionário do 1155 do ET</h1>
+    <p class="subtitle">Vocabulário de informática e games do universo ET</p>
+    <div class="search-container" role="search">
+      <input type="text" id="searchInput" placeholder="Buscar termo ou definição..." autofocus aria-label="Buscar termo ou definição">
+      <span class="search-icon">🔍</span>
+    </div>
+  </header>
+  <main>
+    <div id="entriesContainer" class="entries">
+{{TERMS}}
+    </div>
+    <div id="emptyState" class="empty-state hidden">
+      <p>Nenhum termo encontrado para "<span id="noResultsTerm"></span>"</p>
+    </div>
+  </main>
+  <footer>
+    <p>Feito com <span class="heart">💜</span> para a comunidade do ET</p>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@1155doET" target="_blank" rel="noopener noreferrer">📺 1155 do ET</a>
+      <a href="https://www.youtube.com/@ClipesdoET" target="_blank" rel="noopener noreferrer">🎬 Clipes do ET</a>
+    </div>
+  </footer>
+  <script id="termosData" type="application/json">{{DATA}}</script>
+  <script src="app.js"></script>
+</body>
+</html>

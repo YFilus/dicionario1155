@@ -12,32 +12,8 @@
     "categoria": ""
   },
   {
-    "termo": "Games",
-    "definicao": "Vide Jogos",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Jogos",
-    "definicao": "Vide Games",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Lauro",
-    "definicao": "Também conhecido como Cortista, dono do canal 'Cortes do ET', o único canal do YouTube homologado pela vigilância sanitária e aprovado a disponibilizar recortes das lives e conteúdos do ET.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Cortista",
-    "definicao": "Vide Lauro",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Kiara\nQuiara",
-    "definicao": "Cara, mas com um chanzes.",
+    "termo": "500 e oitenti",
+    "definicao": "Placa de vídeo RX 580 chinesa de qualidade duvidosa.\nFeita de restos de guerra e suor de mineiro chinês.",
     "exemplo": "",
     "categoria": ""
   },
@@ -48,8 +24,14 @@
     "categoria": ""
   },
   {
-    "termo": "Raise",
-    "definicao": "Processador Ryzen, da AMD. Um dos reis do custo-benefício.\nNão confundir com aumento salarial. A decepção seria enorme.",
+    "termo": "Barabinbarabash",
+    "definicao": "/bin/bash\nComando comum no Linux para identificar o interpretador de comandos no sistema.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Batocera",
+    "definicao": "Sistema operacional baseado em Linux focado em jogos e games retrô e emulação.",
     "exemplo": "",
     "categoria": ""
   },
@@ -60,8 +42,56 @@
     "categoria": ""
   },
   {
-    "termo": "500 e oitenti",
-    "definicao": "Placa de vídeo RX 580 chinesa de qualidade duvidosa.\nFeita de restos de guerra e suor de mineiro chinês.",
+    "termo": "Cinematográfico",
+    "definicao": "24 frames por segundo.\nPotencialmente a forma ideal de aprecisar jogos, levando em conta o limite de FPS percebido pelo olho humano. O limite do olho humano fica em torno de 24 fps e DDR3.\nArgumento usado por quem não conhece o pato.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Cortista",
+    "definicao": "Vide Lauro",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Debloat",
+    "definicao": "Remover recursos extras e desnecessários para atingir a melhor performance possível.\nMarie Kondo do sistema operacional.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Eti\nEtanol\nÉter\nEtevaldo",
+    "definicao": "Apelidos carinhosos provenientes de desdobramentos do nome 'ET'.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Farinha",
+    "definicao": "Artefato gerado pelo FSR 3.",
+    "exemplo": "Farinhento esse game.",
+    "categoria": ""
+  },
+  {
+    "termo": "Games",
+    "definicao": "Vide Jogos",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Gap",
+    "definicao": "Ser humilhado pela lata. Dar errado. Não funcionar.\nO momento em que o hardware desiste da vida.",
+    "exemplo": "Tomei gap da lata.",
+    "categoria": ""
+  },
+  {
+    "termo": "Gargalo",
+    "definicao": "Acontece quando a performance de um sistema é limitado pela performance de um componente específico.\nQuando o componente mais fraco de um setup quer ser protagonista na hora errada.",
+    "exemplo": "Ai ET, ta gargalando.",
+    "categoria": ""
+  },
+  {
+    "termo": "Garotas gamers",
+    "definicao": "0.3% do público ativo do canal.",
     "exemplo": "",
     "categoria": ""
   },
@@ -72,8 +102,26 @@
     "categoria": ""
   },
   {
-    "termo": "Linuqui\nLinuki",
-    "definicao": "Linux.\nSistema operacional que promete liberdade e entrega três horas configuração do driver do mouse.",
+    "termo": "Jacaré",
+    "definicao": "Ferramenta para modificar a BIOS de hardwares, geralmente usado para recuperar peças não funcionais.",
+    "exemplo": "Vamos ter que puxar o jacaré.",
+    "categoria": ""
+  },
+  {
+    "termo": "Jogos",
+    "definicao": "Vide Games",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Kiara\nQuiara",
+    "definicao": "Cara, mas com um chanzes.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Labubu",
+    "definicao": "Lubuntu Linux, sistema operacional.\nApelido fofo para monstro capaz de ressuscitar relíquias de antigas eras.",
     "exemplo": "",
     "categoria": ""
   },
@@ -84,9 +132,33 @@
     "categoria": ""
   },
   {
-    "termo": "Sovar\nLenha",
-    "definicao": "Forçar o hardware ao máximo.\nÉ o ato de torturar o hardware até ele entregar mais desempenho.",
-    "exemplo": "Vamos sovar essa lata.",
+    "termo": "Lauro",
+    "definicao": "Também conhecido como Cortista, dono do canal 'Cortes do ET', o único canal do YouTube homologado pela vigilância sanitária e aprovado a disponibilizar recortes das lives e conteúdos do ET.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Linuqui\nLinuki",
+    "definicao": "Linux.\nSistema operacional que promete liberdade e entrega três horas configuração do driver do mouse.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Liso",
+    "definicao": "Performance excelente de hardware. Jogo funcionando a 60+ fps.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Lixo Eletrônico",
+    "definicao": "Hardware que qualquer pessoa normal jogaria fora, mas o ET transforma em games.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Mineirando",
+    "definicao": "Processador em alto funcionamento sem um motivo aparente.",
+    "exemplo": "",
     "categoria": ""
   },
   {
@@ -102,128 +174,14 @@
     "categoria": ""
   },
   {
-    "termo": "Barabinbarabash",
-    "definicao": "/bin/bash\nComando comum no Linux para identificar o interpretador de comandos no sistema.",
+    "termo": "Nintendinho",
+    "definicao": "Super Nintendo, SNES.",
     "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Tchansis\nChanzes\nChinses\nPlanzis\nPimbis\nFanvas",
-    "definicao": "Tchan",
-    "exemplo": "Aquela outra câmera era mais pimbis.",
-    "categoria": ""
-  },
-  {
-    "termo": "Eti\nEtanol\nÉter\nEtevaldo",
-    "definicao": "Apelidos carinhosos provenientes de desdobramentos do nome 'ET'.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Pipipitchu\nPPP2",
-    "definicao": "Versão demonstrativa de jogos e games.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Liso",
-    "definicao": "Performance excelente de hardware. Jogo funcionando a 60+ fps.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Seco",
-    "definicao": "Baixa performance, sem lubrificação.\nHardware pedindo socorro em tempo real.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Pancadinha / Pancada",
-    "definicao": "Bruto",
-    "exemplo": "Esse processador é pancadinha.",
-    "categoria": ""
-  },
-  {
-    "termo": "Labubu",
-    "definicao": "Lubuntu Linux, sistema operacional.\nApelido fofo para monstro capaz de ressuscitar relíquias de antigas eras.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Batocera",
-    "definicao": "Sistema operacional baseado em Linux focado em jogos e games retrô e emulação.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Pato",
-    "definicao": "Software 'Lossless Scaling'. Possui esse apelido por possuir um pato como ícone.\nÚnico animal capaz de dobrar frames no grito.\nTransforma 30fps em 60fps com o poder da inteligência artificial e da fé.",
-    "exemplo": "Vamos puxar o pato?",
-    "categoria": ""
-  },
-  {
-    "termo": "Gap",
-    "definicao": "Ser humilhado pela lata. Dar errado. Não funcionar.\nO momento em que o hardware desiste da vida.",
-    "exemplo": "Tomei gap da lata.",
     "categoria": ""
   },
   {
     "termo": "Pacotada",
     "definicao": "Receber muitos pacotes de informações em um dispositivo. Essa ação geralmente busca sobrecarregar ou interromper o funcionamento do dispositivo.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Gargalo",
-    "definicao": "Acontece quando a performance de um sistema é limitado pela performance de um componente específico.\nQuando o componente mais fraco de um setup quer ser protagonista na hora errada.",
-    "exemplo": "Ai ET, ta gargalando.",
-    "categoria": ""
-  },
-  {
-    "termo": "Pcismo",
-    "definicao": "Entusiastas do PC.",
-    "exemplo": "O PCismo não tem jeito, é assim mesmo.",
-    "categoria": ""
-  },
-  {
-    "termo": "Jacaré",
-    "definicao": "Ferramenta para modificar a BIOS de hardwares, geralmente usado para recuperar peças não funcionais.",
-    "exemplo": "Vamos ter que puxar o jacaré.",
-    "categoria": ""
-  },
-  {
-    "termo": "TVBóqui",
-    "definicao": "TV Box",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Stock",
-    "definicao": "Sem overclock, desempenho padrão do hardware.\nComo a fábrica envia o equipamento, antes do ET se aproximar de suas imediações.",
-    "exemplo": "Vou precisar usar em stock.",
-    "categoria": ""
-  },
-  {
-    "termo": "Debloat",
-    "definicao": "Remover recursos extras e desnecessários para atingir a melhor performance possível.\nMarie Kondo do sistema operacional.",
-    "exemplo": "",
-    "categoria": ""
-  },
-  {
-    "termo": "Temida",
-    "definicao": "Honrada",
-    "exemplo": "A temida RX 580.",
-    "categoria": ""
-  },
-  {
-    "termo": "Farinha",
-    "definicao": "Artefato gerado pelo FSR 3.",
-    "exemplo": "Farinhento esse game.",
-    "categoria": ""
-  },
-  {
-    "termo": "Rapaziadinha",
-    "definicao": "Telespectadores.\nComunidade seleta de amantes do PC.",
     "exemplo": "",
     "categoria": ""
   },
@@ -234,38 +192,80 @@
     "categoria": ""
   },
   {
+    "termo": "Pancadinha / Pancada",
+    "definicao": "Bruto",
+    "exemplo": "Esse processador é pancadinha.",
+    "categoria": ""
+  },
+  {
+    "termo": "Pato",
+    "definicao": "Software 'Lossless Scaling'. Possui esse apelido por possuir um pato como ícone.\nÚnico animal capaz de dobrar frames no grito.\nTransforma 30fps em 60fps com o poder da inteligência artificial e da fé.",
+    "exemplo": "Vamos puxar o pato?",
+    "categoria": ""
+  },
+  {
+    "termo": "Pcismo",
+    "definicao": "Entusiastas do PC.",
+    "exemplo": "O PCismo não tem jeito, é assim mesmo.",
+    "categoria": ""
+  },
+  {
+    "termo": "Pipipitchu\nPPP2",
+    "definicao": "Versão demonstrativa de jogos e games.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Raise",
+    "definicao": "Processador Ryzen, da AMD. Um dos reis do custo-benefício.\nNão confundir com aumento salarial. A decepção seria enorme.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Rapaziadinha",
+    "definicao": "Telespectadores.\nComunidade seleta de amantes do PC.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
+    "termo": "Seco",
+    "definicao": "Baixa performance, sem lubrificação.\nHardware pedindo socorro em tempo real.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
     "termo": "Seco Seco Seco",
     "definicao": "Seco em grau superlativo.",
     "exemplo": "",
     "categoria": ""
   },
   {
-    "termo": "Lixo Eletrônico",
-    "definicao": "Hardware que qualquer pessoa normal jogaria fora, mas o ET transforma em games.",
-    "exemplo": "",
+    "termo": "Sovar\nLenha",
+    "definicao": "Forçar o hardware ao máximo.\nÉ o ato de torturar o hardware até ele entregar mais desempenho.",
+    "exemplo": "Vamos sovar essa lata.",
     "categoria": ""
   },
   {
-    "termo": "Cinematográfico",
-    "definicao": "24 frames por segundo.\nPotencialmente a forma ideal de aprecisar jogos, levando em conta o limite de FPS percebido pelo olho humano. O limite do olho humano fica em torno de 24 fps e DDR3.\nArgumento usado por quem não conhece o pato.",
-    "exemplo": "",
+    "termo": "Stock",
+    "definicao": "Sem overclock, desempenho padrão do hardware.\nComo a fábrica envia o equipamento, antes do ET se aproximar de suas imediações.",
+    "exemplo": "Vou precisar usar em stock.",
     "categoria": ""
   },
   {
-    "termo": "Nintendinho",
-    "definicao": "Super Nintendo, SNES.",
-    "exemplo": "",
+    "termo": "Tchansis\nChanzes\nChinses\nPlanzis\nPimbis\nFanvas",
+    "definicao": "Tchan",
+    "exemplo": "Aquela outra câmera era mais pimbis.",
     "categoria": ""
   },
   {
-    "termo": "Mineirando",
-    "definicao": "Processador em alto funcionamento sem um motivo aparente.",
-    "exemplo": "",
+    "termo": "Temida",
+    "definicao": "Honrada",
+    "exemplo": "A temida RX 580.",
     "categoria": ""
   },
   {
-    "termo": "Garotas gamers",
-    "definicao": "0.3% do público ativo do canal.",
+    "termo": "TVBóqui",
+    "definicao": "TV Box",
     "exemplo": "",
     "categoria": ""
   }

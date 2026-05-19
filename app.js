@@ -24,13 +24,6 @@ function normalizeTerm(text) {
   return [text];
 }
 
-const loadingMessages = [
-  "Carregando termos...",
-  "Consultando o 1155...",
-  "Organizando o vocabulario do ET...",
-  "Buscando na memoria do chat...",
-];
-
 const emptyMessages = [
   "Nenhum termo encontrado.",
   "Nada sobre isso no dicionário ainda. Manda pro ET!",
@@ -52,14 +45,6 @@ function pickMessage(arr) {
   return arr[idx];
 }
 
-function showLoading(visible) {
-  const el = document.getElementById("loadingState");
-  el.classList.toggle("hidden", !visible);
-  if (visible) {
-    el.textContent = pickMessage(loadingMessages);
-  }
-}
-
 function shakeElement(el) {
   el.classList.remove("shake");
   void el.offsetWidth;
@@ -68,48 +53,29 @@ function shakeElement(el) {
 }
 
 function loadData() {
-  showLoading(true);
-  fetch("db/termos.json")
-    .then((res) => {
-      if (!res.ok) throw new Error("Falha ao carregar");
-      return res.json();
-    })
-    .then((data) => {
-      allEntries = data;
-      showLoading(false);
+  const script = document.getElementById("termosData");
+  if (!script) {
+    document.getElementById("entriesContainer").innerHTML =
+      '<div class="empty-state">Erro ao carregar os dados.</div>';
+    return;
+  }
 
-      allEntries.sort((a, b) => {
-        const ta = a.termo.split("\n")[0].trim().toLowerCase();
-        const tb = b.termo.split("\n")[0].trim().toLowerCase();
-        if (ta === "et") return -1;
-        if (tb === "et") return 1;
-        if (ta === "1155") return -1;
-        if (tb === "1155") return 1;
-        return ta.localeCompare(tb, "pt-BR");
-      });
+  allEntries = JSON.parse(script.textContent);
 
-      termLinks = [];
-      const seen = new Set();
-      for (const entry of allEntries) {
-        const variants = normalizeTerm(entry.termo);
-        const id = slugify(variants[0]);
-        for (const v of variants) {
-          const key = v.toLowerCase();
-          if (!seen.has(key)) {
-            seen.add(key);
-            termLinks.push({ term: key, id });
-          }
-        }
+  termLinks = [];
+  const seen = new Set();
+  for (const entry of allEntries) {
+    const variants = normalizeTerm(entry.termo);
+    const id = slugify(variants[0]);
+    for (const v of variants) {
+      const key = v.toLowerCase();
+      if (!seen.has(key)) {
+        seen.add(key);
+        termLinks.push({ term: key, id });
       }
-      termLinks.sort((a, b) => b.term.length - a.term.length);
-
-      renderEntries(allEntries, "");
-    })
-    .catch((err) => {
-      showLoading(false);
-      document.getElementById("entriesContainer").innerHTML =
-        '<div class="empty-state">Erro ao carregar os dados.</div>';
-    });
+    }
+  }
+  termLinks.sort((a, b) => b.term.length - a.term.length);
 }
 
 function renderEntries(entries, searchTerm) {
@@ -142,13 +108,13 @@ function renderEntries(entries, searchTerm) {
       const definicoes = splitAlternatives(entry.definicao);
       const hasExemplo = entry.exemplo && entry.exemplo.trim().length > 0;
 
-      const termHtml = `<div class="term-alternatives">${terms
+      const termHtml = `<h2 class="term-alternatives">${terms
         .map(
           (t, i) =>
             (i > 0 ? '<span class="term-sep">ou</span>' : "") +
             `<span class="term-tag">${escapeHtml(t)}</span>`,
         )
-        .join("")}</div>`;
+        .join("")}</h2>`;
 
       const defHtml =
         definicoes.length > 0
