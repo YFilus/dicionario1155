@@ -18,6 +18,12 @@
     "categoria": ""
   },
   {
+    "termo": "Acabou o canal",
+    "definicao": "Frase a ser dita obrigatóriamente pelos participantes das lives do ET ao recebimento de qualquer coisa que não seja um pedaço de giz de cera mastigado.",
+    "exemplo": "",
+    "categoria": ""
+  },
+  {
     "termo": "Artefato",
     "definicao": "Defeito visual. Geralmente gerado por placas de vídeo defeituosas, ou maracutaias insalubres.",
     "exemplo": "Essa placa tá dando artefato.",
@@ -73,7 +79,7 @@
   },
   {
     "termo": "Games",
-    "definicao": "Vide Jogos",
+    "definicao": "Jogos de verdade.",
     "exemplo": "",
     "categoria": ""
   },
@@ -109,7 +115,7 @@
   },
   {
     "termo": "Jogos",
-    "definicao": "Vide Games",
+    "definicao": "Diminutivo de games.",
     "exemplo": "",
     "categoria": ""
   },
