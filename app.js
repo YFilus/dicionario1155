@@ -238,4 +238,15 @@ document.addEventListener("DOMContentLoaded", () => {
       renderEntries(filtered, "");
     });
   }
+
+  // Corrigir bug: se clicar no link do termo e ele estiver filtrado/escondido, limpa a busca primeiro
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest(".term-link");
+    if (link && searchInput && searchInput.value.trim().length > 0) {
+      searchInput.value = "";
+      toggleClearButton();
+      const filtered = filterEntries("");
+      renderEntries(filtered, "");
+    }
+  });
 });
