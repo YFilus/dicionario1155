@@ -46,10 +46,19 @@ function pickMessage(arr) {
 }
 
 function shakeElement(el) {
+  if (!el) return;
   el.classList.remove("shake");
   void el.offsetWidth;
   el.classList.add("shake");
   setTimeout(() => el.classList.remove("shake"), 500);
+}
+
+function triggerGlitch(el) {
+  if (!el) return;
+  el.classList.remove("glitch-effect");
+  void el.offsetWidth;
+  el.classList.add("glitch-effect");
+  setTimeout(() => el.classList.remove("glitch-effect"), 350);
 }
 
 function loadData() {
@@ -85,16 +94,19 @@ function renderEntries(entries, searchTerm) {
   if (entries.length === 0) {
     container.innerHTML = "";
     const msg = pickMessage(emptyMessages);
-    emptyState.className = "empty-state";
     const escapedTerm = escapeHtml(searchTerm);
-    if (msg.includes("Nenhum termo encontrado para")) {
-      emptyState.innerHTML = "<p>" + msg + ' "' + escapedTerm + '"</p>';
-    } else {
-      emptyState.innerHTML = "<p>" + msg + "</p>";
+    const emptyStateText = document.getElementById("emptyStateText");
+    if (emptyStateText) {
+      if (searchTerm.trim()) {
+        emptyStateText.innerHTML = `${msg}<br><span style="color:var(--highlight); font-size:0.9rem; font-weight:normal; display:inline-block; margin-top:0.5rem;">Busca: "${escapedTerm}"</span>`;
+      } else {
+        emptyStateText.textContent = msg;
+      }
     }
     emptyState.classList.remove("hidden");
     if (searchTerm.trim()) {
       shakeElement(document.querySelector(".search-container"));
+      triggerGlitch(document.querySelector(".search-container"));
     }
     return;
   }
@@ -192,13 +204,38 @@ document.addEventListener("DOMContentLoaded", () => {
   loadData();
 
   const searchInput = document.getElementById("searchInput");
+  const clearSearch = document.getElementById("clearSearch");
   let debounceTimer;
 
+  function toggleClearButton() {
+    if (clearSearch) {
+      if (searchInput.value.trim().length > 0) {
+        clearSearch.classList.remove("hidden");
+      } else {
+        clearSearch.classList.add("hidden");
+      }
+    }
+  }
+
+  // Inicializar estado do botão
+  toggleClearButton();
+
   searchInput.addEventListener("input", () => {
+    toggleClearButton();
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
       const filtered = filterEntries(searchInput.value);
       renderEntries(filtered, searchInput.value);
     }, 150);
   });
+
+  if (clearSearch) {
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      toggleClearButton();
+      searchInput.focus();
+      const filtered = filterEntries("");
+      renderEntries(filtered, "");
+    });
+  }
 });

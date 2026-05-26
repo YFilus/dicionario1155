@@ -15,6 +15,9 @@
   <meta name="theme-color" content="#0f0f1a">
   <link rel="canonical" href="https://dicionario1155doet.netlify.app">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {{JSONLD}}
@@ -22,11 +25,18 @@
 </head>
 <body>
   <header>
-    <h1>Dicionário do 1155 do ET</h1>
-    <p class="subtitle">Vocabulário de informática e games do universo ET</p>
-    <div class="search-container" role="search">
-      <input type="text" id="searchInput" placeholder="Buscar termo ou definição..." autofocus aria-label="Buscar termo ou definição">
-      <span class="search-icon">🔍</span>
+    <div class="header-content">
+      <div class="header-top">
+        <div class="title-container">
+          <h1>Dicionário do 1155 do ET</h1>
+          <p class="subtitle">Vocabulário de informática e games do universo ET</p>
+        </div>
+      </div>
+      <div class="search-container" role="search">
+        <input type="text" id="searchInput" placeholder="Buscar termo ou definição..." autofocus aria-label="Buscar termo ou definição">
+        <span class="search-icon">🔍</span>
+        <button id="clearSearch" class="clear-btn hidden" aria-label="Limpar busca" type="button">&times;</button>
+      </div>
     </div>
   </header>
   <main>
@@ -34,7 +44,31 @@
 {{TERMS}}
     </div>
     <div id="emptyState" class="empty-state hidden">
-      <p>Nenhum termo encontrado para "<span id="noResultsTerm"></span>"</p>
+      <div class="empty-illustration">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Monitor retro -->
+          <rect x="2" y="3" width="20" height="13" rx="2" ry="2" class="svg-monitor" />
+          <path d="M12 16v4" />
+          <path d="M8 20h8" />
+          
+          <!-- Elementos de glitch / artefatos no interior da tela -->
+          <line x1="5" y1="6" x2="19" y2="6" class="svg-glitch-line svg-glitch-1" />
+          <line x1="7" y1="9" x2="15" y2="9" class="svg-glitch-line svg-glitch-2" />
+          <line x1="4" y1="12" x2="20" y2="12" class="svg-glitch-line svg-glitch-3" />
+          
+          <!-- Detalhes de botões físicos do monitor retro -->
+          <circle cx="18" cy="14" r="0.5" fill="currentColor" />
+          <circle cx="16" cy="14" r="0.5" fill="currentColor" />
+          
+          <!-- Olhinhos de triste/erro (cruzes de glitch) -->
+          <path d="M8 8l2 2m0-2l-2 2" class="svg-eye" />
+          <path d="M14 8l2 2m0-2l-2 2" class="svg-eye" />
+        </svg>
+      </div>
+      <p id="emptyStateText">Nenhum termo encontrado.</p>
+      <a href="https://docs.google.com/spreadsheets/d/17PFBtzTPxxinjmkkPuDOFBnwmfuBxKcyhfTFOkBae5Y" target="_blank" rel="noopener noreferrer" class="suggest-btn empty-suggest-btn">
+        <span class="btn-icon">💡</span> Sugerir este Termo
+      </a>
     </div>
   </main>
   <footer>
@@ -46,5 +80,10 @@
   </footer>
   <script id="termosData" type="application/json">{{DATA}}</script>
   <script src="app.js"></script>
+  
+  <!-- Botão Sugerir Termo Fixo -->
+  <a href="https://docs.google.com/spreadsheets/d/17PFBtzTPxxinjmkkPuDOFBnwmfuBxKcyhfTFOkBae5Y" target="_blank" rel="noopener noreferrer" class="suggest-btn fixed-btn" id="suggestTermBtn">
+    <span class="btn-icon">💡</span> Sugerir Termo
+  </a>
 </body>
 </html>

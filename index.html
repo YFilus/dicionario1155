@@ -15,6 +15,9 @@
   <meta name="theme-color" content="#0f0f1a">
   <link rel="canonical" href="https://dicionario1155doet.netlify.app">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
@@ -260,11 +263,18 @@
 </head>
 <body>
   <header>
-    <h1>Dicionário do 1155 do ET</h1>
-    <p class="subtitle">Vocabulário de informática e games do universo ET</p>
-    <div class="search-container" role="search">
-      <input type="text" id="searchInput" placeholder="Buscar termo ou definição..." autofocus aria-label="Buscar termo ou definição">
-      <span class="search-icon">🔍</span>
+    <div class="header-content">
+      <div class="header-top">
+        <div class="title-container">
+          <h1>Dicionário do 1155 do ET</h1>
+          <p class="subtitle">Vocabulário de informática e games do universo ET</p>
+        </div>
+      </div>
+      <div class="search-container" role="search">
+        <input type="text" id="searchInput" placeholder="Buscar termo ou definição..." autofocus aria-label="Buscar termo ou definição">
+        <span class="search-icon">🔍</span>
+        <button id="clearSearch" class="clear-btn hidden" aria-label="Limpar busca" type="button">&times;</button>
+      </div>
     </div>
   </header>
   <main>
@@ -469,7 +479,31 @@
     </article>
     </div>
     <div id="emptyState" class="empty-state hidden">
-      <p>Nenhum termo encontrado para "<span id="noResultsTerm"></span>"</p>
+      <div class="empty-illustration">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Monitor retro -->
+          <rect x="2" y="3" width="20" height="13" rx="2" ry="2" class="svg-monitor" />
+          <path d="M12 16v4" />
+          <path d="M8 20h8" />
+          
+          <!-- Elementos de glitch / artefatos no interior da tela -->
+          <line x1="5" y1="6" x2="19" y2="6" class="svg-glitch-line svg-glitch-1" />
+          <line x1="7" y1="9" x2="15" y2="9" class="svg-glitch-line svg-glitch-2" />
+          <line x1="4" y1="12" x2="20" y2="12" class="svg-glitch-line svg-glitch-3" />
+          
+          <!-- Detalhes de botões físicos do monitor retro -->
+          <circle cx="18" cy="14" r="0.5" fill="currentColor" />
+          <circle cx="16" cy="14" r="0.5" fill="currentColor" />
+          
+          <!-- Olhinhos de triste/erro (cruzes de glitch) -->
+          <path d="M8 8l2 2m0-2l-2 2" class="svg-eye" />
+          <path d="M14 8l2 2m0-2l-2 2" class="svg-eye" />
+        </svg>
+      </div>
+      <p id="emptyStateText">Nenhum termo encontrado.</p>
+      <a href="https://docs.google.com/spreadsheets/d/17PFBtzTPxxinjmkkPuDOFBnwmfuBxKcyhfTFOkBae5Y" target="_blank" rel="noopener noreferrer" class="suggest-btn empty-suggest-btn">
+        <span class="btn-icon">💡</span> Sugerir este Termo
+      </a>
     </div>
   </main>
   <footer>
@@ -481,5 +515,10 @@
   </footer>
   <script id="termosData" type="application/json">[{"termo":"ET","definicao":"Enzo Túlio Ferreira Carvalho, 24 (03/11/2001). 1,94 de altura, 118kgs, calçado 47. Solteiro (informação de 13/02/2026).\nPorte alto e imponente, pele amanteigada e cabelos castanho longos e sedosos.\nO terror do silício.","exemplo":"","categoria":""},{"termo":"1155","definicao":"Modelo de socket de placa mãe lendária para processadores Intel de 2ª e 3ª geração. Primeiro computador do ET.\nExistem boatos de que seu primeiro berço era feito de componentes de duas placas mãe 1155 queimadas. Não foi confirmado. Também não foi negado.","exemplo":"","categoria":""},{"termo":"500 e oitenti","definicao":"Placa de vídeo RX 580 chinesa de qualidade duvidosa.\nFeita de restos de guerra e suor de mineiro chinês.","exemplo":"","categoria":""},{"termo":"Acabou o canal","definicao":"Frase a ser dita obrigatóriamente pelos participantes das lives do ET ao recebimento de qualquer coisa que não seja um pedaço de giz de cera mastigado.","exemplo":"","categoria":""},{"termo":"Artefato","definicao":"Defeito visual. Geralmente gerado por placas de vídeo defeituosas, ou maracutaias insalubres.","exemplo":"Essa placa tá dando artefato.","categoria":""},{"termo":"Barabinbarabash","definicao":"/bin/bash\nComando comum no Linux para identificar o interpretador de comandos no sistema.","exemplo":"","categoria":""},{"termo":"Batocera","definicao":"Sistema operacional baseado em Linux focado em jogos e games retrô e emulação.","exemplo":"","categoria":""},{"termo":"Benk\nBencar","definicao":"Benchmark. Ato de fazer um teste de performance em determinado setup, para determinar qual o máximo de desempenho do hardware sob condições ideais.","exemplo":"","categoria":""},{"termo":"Cinematográfico","definicao":"24 frames por segundo.\nPotencialmente a forma ideal de aprecisar jogos, levando em conta o limite de FPS percebido pelo olho humano. O limite do olho humano fica em torno de 24 fps e DDR3.\nArgumento usado por quem não conhece o pato.","exemplo":"","categoria":""},{"termo":"Cortista","definicao":"Vide Lauro","exemplo":"","categoria":""},{"termo":"Debloat","definicao":"Remover recursos extras e desnecessários para atingir a melhor performance possível.\nMarie Kondo do sistema operacional.","exemplo":"","categoria":""},{"termo":"Eti\nEtanol\nÉter\nEtevaldo","definicao":"Apelidos carinhosos provenientes de desdobramentos do nome 'ET'.","exemplo":"","categoria":""},{"termo":"Farinha","definicao":"Artefato gerado pelo FSR 3.","exemplo":"Farinhento esse game.","categoria":""},{"termo":"Games","definicao":"Jogos de verdade.","exemplo":"","categoria":""},{"termo":"Gap","definicao":"Ser humilhado pela lata. Dar errado. Não funcionar.\nO momento em que o hardware desiste da vida.","exemplo":"Tomei gap da lata.","categoria":""},{"termo":"Gargalo","definicao":"Acontece quando a performance de um sistema é limitado pela performance de um componente específico.\nQuando o componente mais fraco de um setup quer ser protagonista na hora errada.","exemplo":"Ai ET, ta gargalando.","categoria":""},{"termo":"Garotas gamers","definicao":"0.3% do público ativo do canal.","exemplo":"","categoria":""},{"termo":"Irmão Gamer","definicao":"Enrico Túlio, irmão do ET, mesmo sendo um ele próprio.","exemplo":"","categoria":""},{"termo":"Jacaré","definicao":"Ferramenta para modificar a BIOS de hardwares, geralmente usado para recuperar peças não funcionais.","exemplo":"Vamos ter que puxar o jacaré.","categoria":""},{"termo":"Jogos","definicao":"Diminutivo de games.","exemplo":"","categoria":""},{"termo":"Kiara\nQuiara","definicao":"Cara, mas com um chanzes.","exemplo":"","categoria":""},{"termo":"Labubu","definicao":"Lubuntu Linux, sistema operacional.\nApelido fofo para monstro capaz de ressuscitar relíquias de antigas eras.","exemplo":"","categoria":""},{"termo":"Lata","definicao":"Parte física do hardware ou sistema.\nInvólucro protetor de eletrônicos produzido por material metálico.\nAmontoado de metal e silício conduzente de eletricidade que, ocasionalmente, roda jogos.","exemplo":"","categoria":""},{"termo":"Lauro","definicao":"Também conhecido como Cortista, dono do canal 'Cortes do ET', o único canal do YouTube homologado pela vigilância sanitária e aprovado a disponibilizar recortes das lives e conteúdos do ET.","exemplo":"","categoria":""},{"termo":"Linuqui\nLinuki","definicao":"Linux.\nSistema operacional que promete liberdade e entrega três horas configuração do driver do mouse.","exemplo":"","categoria":""},{"termo":"Liso","definicao":"Performance excelente de hardware. Jogo funcionando a 60+ fps.","exemplo":"","categoria":""},{"termo":"Lixo Eletrônico","definicao":"Hardware que qualquer pessoa normal jogaria fora, mas o ET transforma em games.","exemplo":"","categoria":""},{"termo":"Mineirando","definicao":"Processador em alto funcionamento sem um motivo aparente.","exemplo":"","categoria":""},{"termo":"Na alta\nNa altinha","definicao":"Na coragem.\nMétodo para resolução de problemas técnicos baseado no otimismo.","exemplo":"Vamos rodar esse jogo sem dll, na altinha?","categoria":""},{"termo":"Na baixa","definicao":"Na humildade.","exemplo":"","categoria":""},{"termo":"Nintendinho","definicao":"Super Nintendo, SNES.","exemplo":"","categoria":""},{"termo":"Pacotada","definicao":"Receber muitos pacotes de informações em um dispositivo. Essa ação geralmente busca sobrecarregar ou interromper o funcionamento do dispositivo.","exemplo":"","categoria":""},{"termo":"Pambas","definicao":"Questionável.\nMediante avaliação técnica perita, identificaram-se discretos, leves e suaves riscos de incompatibilidade com a integridade física do usuário durante o uso do equipamento.","exemplo":"Esse processador tá meio pambas.","categoria":""},{"termo":"Pancadinha / Pancada","definicao":"Bruto","exemplo":"Esse processador é pancadinha.","categoria":""},{"termo":"Pato","definicao":"Software 'Lossless Scaling'. Possui esse apelido por possuir um pato como ícone.\nÚnico animal capaz de dobrar frames no grito.\nTransforma 30fps em 60fps com o poder da inteligência artificial e da fé.","exemplo":"Vamos puxar o pato?","categoria":""},{"termo":"Pcismo","definicao":"Entusiastas do PC.","exemplo":"O PCismo não tem jeito, é assim mesmo.","categoria":""},{"termo":"Pipipitchu\nPPP2","definicao":"Versão demonstrativa de jogos e games.","exemplo":"","categoria":""},{"termo":"Raise","definicao":"Processador Ryzen, da AMD. Um dos reis do custo-benefício.\nNão confundir com aumento salarial. A decepção seria enorme.","exemplo":"","categoria":""},{"termo":"Rapaziadinha","definicao":"Telespectadores.\nComunidade seleta de amantes do PC.","exemplo":"","categoria":""},{"termo":"Seco","definicao":"Baixa performance, sem lubrificação.\nHardware pedindo socorro em tempo real.","exemplo":"","categoria":""},{"termo":"Seco Seco Seco","definicao":"Seco em grau superlativo.","exemplo":"","categoria":""},{"termo":"Sovar\nLenha","definicao":"Forçar o hardware ao máximo.\nÉ o ato de torturar o hardware até ele entregar mais desempenho.","exemplo":"Vamos sovar essa lata.","categoria":""},{"termo":"Stock","definicao":"Sem overclock, desempenho padrão do hardware.\nComo a fábrica envia o equipamento, antes do ET se aproximar de suas imediações.","exemplo":"Vou precisar usar em stock.","categoria":""},{"termo":"Tchansis\nChanzes\nChinses\nPlanzis\nPimbis\nFanvas","definicao":"Tchan","exemplo":"Aquela outra câmera era mais pimbis.","categoria":""},{"termo":"Temida","definicao":"Honrada","exemplo":"A temida RX 580.","categoria":""},{"termo":"TVBóqui","definicao":"TV Box","exemplo":"","categoria":""}]</script>
   <script src="app.js"></script>
+  
+  <!-- Botão Sugerir Termo Fixo -->
+  <a href="https://docs.google.com/spreadsheets/d/17PFBtzTPxxinjmkkPuDOFBnwmfuBxKcyhfTFOkBae5Y" target="_blank" rel="noopener noreferrer" class="suggest-btn fixed-btn" id="suggestTermBtn">
+    <span class="btn-icon">💡</span> Sugerir Termo
+  </a>
 </body>
 </html>
